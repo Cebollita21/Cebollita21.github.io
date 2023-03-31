@@ -1,0 +1,54 @@
+/* link dysplay flex https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+body{
+    background: #848688;
+    font-family: sans-serif;
+    margin: 0%;
+    text-align: center; /* esto pone las letras en el centro */
+}
+
+a{
+    text-decoration: none; /*esto es para quitar la linea de abajo*/ 
+    color: white;
+}
+
+header{
+    background-color:#01245C; /*color de fondo del hader*/
+    display: flex; /*organiza los lementos de izquiera a derecha, en este caso todos los linsks, inicio,codigos, producto*/
+    min-height: 100px; /*esto es el tamano que va a tener la barra*/
+    justify-content: space-between;
+    align-items: center; /*esto alinea los elementos dentro de lo que es el header o ya sea el div*/
+    padding: 10px; /*esto centra los lementos que estan dentro del encabezado haeder*/
+    /* margin:100px; le da un espacio a todo el elemento en general osea a todos lo elemntos incluyendo el header */
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 70px;
+    margin-right: 40px;
+    margin-left: 50px;
+}
+
+nav a{ /*la "a" nos dice que estamos llamadndo a todas las etiquetas a dentro de nuestra etiqueta <nav>*/
+    font-weight: 1000;/*es el tamano de la letra*/
+    padding-right: 50px;/*la separacion que hay entre palabras del menu*/
+    
+    
+}
+
+nav a:hover{        /*esto cambia el color de las letras cuando pasamos el mause por encima */
+    color:#ffffff;
+    background: #63676b; /*esto le pone un fondo a las palabras*/
+}
+
+@media (max-width: 915px){ /*cuando lleguemos a tantos pixeles en la pagina, se va a empezar a comprimir esto es muy util en los ceclulares poara que se vea ordenado*/
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
